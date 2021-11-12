@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Movies</h1>
+  <div class="d-flex">
+    <ul>
+      <% @movies.each do |movie|  %>
+          <li class="list-movie"><%= link_to(movie.title, movie_path(movie) ) %>
+            <p><%= movie.overview %></p>
+            <%= image_tag movie.poster_url, height: 200 %>
+            <p><%= movie.rating %></p>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
